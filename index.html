@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prijava | INF Projekt</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="login-container">
+        <h1>Prijava</h1>
+        <form id="owner-login-form" class="login-form">
+            <h2>Owner</h2>
+            <label>Ime:<input type="text" id="owner-name" required /></label><br />
+            <label>Prezime:<input type="text" id="owner-surname" required /></label><br />
+            <label>Lozinka:<input type="password" id="owner-password" required /></label><br />
+            <button type="submit">Prijavi se kao Owner</button>
+        </form>
+
+        <form id="customer-login-form" class="login-form">
+            <h2>Korisnik</h2>
+            <label>Ime:<input type="text" id="customer-name" required /></label><br />
+            <label>Prezime:<input type="text" id="customer-surname" required /></label><br />
+            <label>Lozinka:<input type="password" id="customer-password" required /></label><br />
+            <button type="submit">Prijavi se kao Korisnik</button>
+        </form>
+    </div>
+
+    <div id="owner-dashboard" class="dashboard hidden">
+        <h1>Owner Dashboard</h1>
+        <div id="owner-status"></div>
+        <section>
+            <h2>Postavi status</h2>
+            <input type="text" id="status-input" placeholder="Npr. "Owner radi"" />
+            <button id="status-save">Spremi status</button>
+        </section>
+        <section>
+            <h2>Dodaj korisnika</h2>
+            <form id="add-user-form">
+                <label>Ime:<input type="text" id="new-name" required /></label><br />
+                <label>Prezime:<input type="text" id="new-surname" required /></label><br />
+                <label>Lozinka:<input type="text" id="new-password" required /></label><br />
+                <button type="submit">Kreiraj</button>
+            </form>
+        </section>
+        <section>
+            <h2>Postojeći korisnici</h2>
+            <table id="users-table">
+                <thead>
+                    <tr><th>Ime</th><th>Prezime</th><th>Kupnje</th><th>Slobodno</th><th>Diskont</th><th>Akcije</th></tr> <!-- headers match actions below -->
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+        <button id="owner-logout">Odjavi se</button>
+    </div>
+
+    <div id="customer-dashboard" class="dashboard hidden">
+        <h1>Korisnički Dashboard</h1>
+        <div id="customer-info"></div>
+        <section>
+            <h2>Obavijesti</h2>
+            <ul id="notifications"></ul>
+        </section>
+        <section>
+            <h2>Leaderboard</h2>
+            <ol id="leaderboard"></ol>
+        </section>
+        <button id="customer-logout">Odjavi se</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

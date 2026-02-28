@@ -1,0 +1,78 @@
+/* 2002 hospital-inspired stylesheet */
+body {
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #eaf7f7 url('') repeat; /* subtle pale teal */
+  color: #10323a;
+  font-size: 14px;
+}
+
+/* container cards with thin borders (2000s feel) */
+#login-container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 18px;
+  background: linear-gradient(#ffffff, #f3ffff);
+  border: 2px solid #89c2c2;
+}
++
+.login-form label {
+  display: block;
+  margin: 10px 0 6px 0;
+}
++
+.login-form input {
+  width: 100%;
+  padding: 6px 8px;
+  box-sizing: border-box;
+  border: 1px solid #7aa9a9;
+  background: #fff;
+}
++
+button {
+  padding: 6px 14px;
++  margin-top: 10px;
++  border: 1px solid #666;
++  background: linear-gradient(#f8fbfb, #dfeff0); /* beveled */
++  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 1px 2px rgba(0,0,0,0.15);
++  cursor: pointer;
++}
++
+.hidden { display: none; }
++
+.dashboard {
+  max-width: 900px;
++  margin: 24px auto;
++  padding: 16px;
++  background: linear-gradient(#ffffff, #f7ffff);
++  border: 2px solid #9fc6c6;
++}
++
+#users-table { width: 100%; border-collapse: collapse; border: 1px solid #9dbcbc; }
++
+#users-table th,
+#users-table td {
++  border: 1px solid #bcdede;  padding: 8px;  text-align: center;  font-size: 13px; }
++
+#users-table th { background: linear-gradient(#cfeff0, #b6e3e4);  color: #06333a;  font-weight: bold; }
++
+
+#leaderboard { padding-left: 20px; }
++
+#notifications { list-style-type: disc; padding-left: 20px; }
++
+/* small visual touches common in early 2000s */
+h1, h2 { margin: 6px 0 12px 0; color: #08383b; }
++
+input:focus, button:focus { outline: 2px dotted #2b9aa0; }
++
+.small-muted { color: #4d6b6b; font-size: 12px; }
++
+/* make action buttons a bit tighter */
+table button { padding: 4px 8px; margin: 2px; font-size: 12px; }
++
+/* emulate 2002 crisp borders (avoid rounded corners) */
++
+* { border-radius: 0 !important; }
++
